@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ajinkya's Neighbourhood Map</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside id="sidenav" data-bind="css: { 'open-sidenav': openNav() == true, 'close-sidenav': closeNav() == true }">
+      <div class="cross-container">
+        <i id="close-cross" data-bind="click: closeSideNavi, css: { 'open-hamburger': openNav() == false }" class="fa fa-times fa-lg" aria-hidden="true"></i>
+      </div>
+      <div class="input-box">
+        <input data-bind="textInput: query" placeholder="Filter...">
+        </input>
+      </div>
+      <ul data-bind="foreach: searchResults">
+        <li data-bind="text: name, click: $parent.setLocation"></li>
+      </ul>
+    </aside>
+    <main id="main" data-bind="css: { 'open-main': openNav() == true, 'close-main': closeNav() == true }">
+      <header id="topbar">
+        <div class="hamburger-container">
+          <i id="hamburger" data-bind="click: openSideNavi, css: { 'open-hamburger': openNav() == true }" class="fa fa-bars fa-lg" aria-hidden="true"></i>
+        </div>
+        <div id="page-title">
+          <h1>Indian restaurants</h1>
+        </div>
+      </header>
+      <article id="map-container">
+        <div id="map">
+        </div>
+      </article>
+    </main>
+  </div>
+  <script src="knockout-3.4.2.js"></script>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="app.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAOkdpYuKN5jZWQlaTyRbC1KNgOxtV29yo&v=3&callback=initMap" onerror="googleError()"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+html,
+body,
+.container,
+#main,
+#map {
+	height: 100%;
+}
+
+
+#topbar {
+	height: 86px;
+}
+
+
+#map-container {
+	height: calc(100% - 86px);
+}
+
+
+* {
+	font-family: "Noto Sans", sans-serif;
+}
+
+
+body {
+	margin: 0;
+}
+
+
+#topbar,
+#map {
+	width: 100%;
+	background-color: brown;
+}
+
+
+#topbar {
+	display: flex;
+}
+
+
+#hamburger,
+#close-cross,
+li {
+	cursor: pointer;
+}
+
+
+#hamburger {
+	margin: 10px;
+}
+
+
+.hamburger-container,
+#page-title {
+	align-self: center;
+}
+
+
+#close-cross {
+	color: #808e95;
+}
+
+
+.cross-container {
+	margin-top: 0.67em;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+
+#page-title {
+	margin-left: 10px;
+}
+
+
+#sidenav {
+	background-color: #b0bec5;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+
+ul {
+	list-style-type: none;
+	margin-left: 10px;
+	padding-left: 0;
+}
+
+
+li {
+	margin: 10px 0 10px 0;
+}
+
+
+.input-box {
+	margin: 10px;
+}
+
+
+#main {
+	transition: margin-left .5s;
+}
+
+
+.open-hamburger {
+	width: 0;
+	visibility: hidden;
+}
+
+
+.close-hamburger {
+	width: auto;
+	visibility: visible;
+}
+
+
+.open-sidenav {
+	width: 230px;
+}
+
+
+.close-sidenav {
+	width: 0px;
+}
+
+
+.open-main {
+	margin-left: 230px;
+}
+
+
+.close-main {
+	margin-left: 0;
+}
+
+
+@media only screen and (max-width: 580px) {
+	h1 {
+		font-size: 1.8em;
+	}
+}
+
+
+@media only screen and (max-width: 330px) {
+	h1 {
+		font-size: 1.6em;
+	}
+}
