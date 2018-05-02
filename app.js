@@ -108,7 +108,7 @@ function initMap() {
 
 			// FourSquare Ajax
 			// URL for foursquare
-			var fourSquareURL = 'https://api.foursquare.com/v2/venues/search?ll=' + marker.position.lat() + ',' + marker.position.lng() + '&query=' + marker.title + '&client_id=SS2TRLPAC41IELJPZUGXUYANVRWY3ULRKYF3YKWH4MCR4D0Q&client_secret=04WUI02PCQ4ATGUUGPFSPC5MBQ4BZC230SM0PWJZUDYPXP0K&v=20170628';
+			var fourSquareURL = 'https://api.foursquare.com/v2/venues/search?ll=' + marker.position.lat() + ',' + marker.position.lng() + '&query=' + marker.title + '&client_id=TYVX3Q1DRSN1YZQSUW42FCZCBXHF0SR0LN4BY0SFQNBLIN4N&client_secret=2FXUJ5Q343FDKWIX3CD5BUHLSZ5HAPH5IPXOENYFBC1W0XYB&v=20170628';
 
 			var fourSquareRequestTimeOut = setTimeout(function() {
 				infowindow.setContent('<div>' + marker.title + '</div>' + '<div>Failed to get a response from FourSquare</div>');
